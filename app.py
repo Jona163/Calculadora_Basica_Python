@@ -1,3 +1,4 @@
+
 # Autor: Jonathan Hernández
 # Fecha: 14 Septiembre 2024
 # Descripción: Código para calculadora sencilla , python.
@@ -25,7 +26,6 @@ def restar():
     except ValueError:
         messagebox.showerror("Error", "Por favor ingresa números válidos")
 
-
 def multiplicar():
     try:
         num1 = float(entry1.get())
@@ -45,8 +45,8 @@ def dividir():
             resultado = num1 / num2
             label_resultado.config(text=f"Resultado: {resultado}")
     except ValueError:
-        messagebox.showerror("Error", "Por f
-                             
+        messagebox.showerror("Error", "Por favor ingresa números válidos")
+
 # Crear la ventana principal
 root = tk.Tk()
 root.title("Calculadora Básica")
@@ -83,4 +83,3 @@ label_resultado.grid(row=4, column=0, columnspan=2)
 
 # Ejecutar el bucle principal de la ventana
 root.mainloop()
-
