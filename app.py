@@ -34,7 +34,7 @@ def multiplicar():
     except ValueError:
         messagebox.showerror("Error", "Por favor ingresa números válidos")
 
-ef dividir():
+def dividir():
     try:
         num1 = float(entry1.get())
         num2 = float(entry2.get())
@@ -59,7 +59,6 @@ color_boton_hover = "#C0392B"
 color_texto = "#ECF0F1"
 color_entry = "#34495E"
 
-
 # Función para cambiar el color del botón al pasar el ratón
 def on_enter(e):
     e.widget['background'] = color_boton_hover
@@ -79,7 +78,6 @@ label2.grid(row=1, column=0, padx=10, pady=10)
 
 entry2 = tk.Entry(root, font=fuente_general, bg=color_entry, fg=color_texto)
 entry2.grid(row=1, column=1, padx=10, pady=10)
-
 
 # Botones de las operaciones
 boton_sumar = tk.Button(root, text="Sumar", font=fuente_general, bg=color_boton, fg=color_texto, command=sumar)
@@ -108,4 +106,3 @@ label_resultado.grid(row=4, column=0, columnspan=2, padx=10, pady=20)
 
 # Ejecutar el bucle principal de la ventana
 root.mainloop()
-
