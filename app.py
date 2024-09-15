@@ -79,3 +79,33 @@ label2.grid(row=1, column=0, padx=10, pady=10)
 
 entry2 = tk.Entry(root, font=fuente_general, bg=color_entry, fg=color_texto)
 entry2.grid(row=1, column=1, padx=10, pady=10)
+
+
+# Botones de las operaciones
+boton_sumar = tk.Button(root, text="Sumar", font=fuente_general, bg=color_boton, fg=color_texto, command=sumar)
+boton_sumar.grid(row=2, column=0, padx=10, pady=10, sticky="ew")
+boton_sumar.bind("<Enter>", on_enter)
+boton_sumar.bind("<Leave>", on_leave)
+
+boton_restar = tk.Button(root, text="Restar", font=fuente_general, bg=color_boton, fg=color_texto, command=restar)
+boton_restar.grid(row=2, column=1, padx=10, pady=10, sticky="ew")
+boton_restar.bind("<Enter>", on_enter)
+boton_restar.bind("<Leave>", on_leave)
+
+boton_multiplicar = tk.Button(root, text="Multiplicar", font=fuente_general, bg=color_boton, fg=color_texto, command=multiplicar)
+boton_multiplicar.grid(row=3, column=0, padx=10, pady=10, sticky="ew")
+boton_multiplicar.bind("<Enter>", on_enter)
+boton_multiplicar.bind("<Leave>", on_leave)
+
+boton_dividir = tk.Button(root, text="Dividir", font=fuente_general, bg=color_boton, fg=color_texto, command=dividir)
+boton_dividir.grid(row=3, column=1, padx=10, pady=10, sticky="ew")
+boton_dividir.bind("<Enter>", on_enter)
+boton_dividir.bind("<Leave>", on_leave)
+
+# Etiqueta para mostrar el resultado
+label_resultado = tk.Label(root, text="Resultado: ", font=("Arial", 18, "bold"), bg="#2C3E50", fg="white")
+label_resultado.grid(row=4, column=0, columnspan=2, padx=10, pady=20)
+
+# Ejecutar el bucle principal de la ventana
+root.mainloop()
+
